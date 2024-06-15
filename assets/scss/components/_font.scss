@@ -1,0 +1,38 @@
+@use '../components/variables' as *;
+
+@font-face{
+  font-family: "iransansx";
+  src: url(../font/iransansx/IRANSansXV.woff2);
+  font-weight: 100 900;
+  font-display: fallback;
+}
+// @font-face {
+//   font-family: "vazir";
+//   src: url(../font/vazir/Vazirmatn-Thin.woff2);
+//   font-weight: 100;
+// }
+// @font-face {
+//   font-family: "vazir";
+//   src: url(../font/vazir/Vazirmatn-Light.woff2);
+//   font-weight: 200;
+// }
+// @font-face {
+//   font-family: "vazir";
+//   src: url(../font/vazir/Vazirmatn-Regular.woff2);
+//   font-weight: 300;
+// }
+// @font-face {
+//   font-family: "vazir";
+//   src: url(../font/vazir/Vazirmatn-Medium.woff2);
+//   font-weight: 400;
+// }
+// @font-face {
+//   font-family: "vazir";
+//   src: url(../font/vazir/Vazirmatn-Bold.woff2);
+//   font-weight: bold;
+// }
+// @font-face {
+//   font-family: "vazir";
+//   src: url(../font/vazir/Vazirmatn-Black.woff2);
+//   font-weight: 900;
+// }

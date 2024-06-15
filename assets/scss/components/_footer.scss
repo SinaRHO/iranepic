@@ -1,0 +1,123 @@
+@use '../components/font' as *;
+@use '../components/media' as *;
+@use '../components/variables' as *;
+
+footer {
+  @include respond-to ('medium--tablet'){
+    padding-bottom: 40px ;
+  }
+  .link--icon__footer {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+      .fa-brands--white{
+        color: var(--primary);
+      }
+    }
+    .fa-brands--white {
+      color: white;
+      transition: .1s all ease-in;
+    }
+  }
+
+  .footer--container {
+    gap: 32px;
+  }
+
+  .copyright-box {
+    padding: 16px;
+    background-color: var(--cpy-bg);
+    display: flex;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--black);
+
+    @include respond-to ('large--phone') {
+      flex-direction: column;
+    }
+
+    .creator {
+      margin-right: auto;
+
+      a {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  background-color: var(--footer-bg);
+
+  .footer--container {
+    background-color: var(--header--bg);
+    padding: 32px 16px;
+  }
+
+  .footer--col {
+    flex-grow: 1;
+    align-items: center;
+
+    a {
+      font-weight: 300;
+      color: var(--link-color);
+      transition: .1s all;
+      &:hover{
+        color: var(--link-hover);
+      }
+    }
+  }
+
+  .logo--desc__icons {
+    width: 35%;
+
+    .social-media__icons {
+      display: flex;
+      margin-top: 24px;
+      gap: 16px;
+
+      a {
+        color: #000;
+        transition: .1s all;
+
+        &:hover {
+          color: #0479ff;
+        }
+      }
+    }
+
+    img {
+      max-width: 120px;
+    }
+  }
+
+  .links--foter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    ul {
+      li {
+        margin-block: 12px;
+
+        a {
+          color: var(--link-color);
+          transition: .1s all;
+          font-weight: 300;
+          font-size: $f-link;
+
+          &:hover {
+            color: var(--link-hover);
+          }
+        }
+      }
+    }
+  }
+}

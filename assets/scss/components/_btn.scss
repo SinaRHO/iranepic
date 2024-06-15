@@ -1,0 +1,100 @@
+@use '../components/variables' as *;
+
+
+
+.btn {
+  background: none;
+  font-family: "iransansx";
+  font-weight: 300;
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  height: 40px;
+  min-width: 40px;
+  max-width: 180px;
+  justify-content: center;
+  font-size: $f-btn;
+  padding: 0 12px;
+  text-align: center;
+  transition: background-color .1s ease, color .1s ease, border .1s ease;
+  cursor: pointer;
+  &.icon--btn{
+    padding: 0;
+    background: none;
+  }
+  &:hover {
+    background-color: var(--btn--bg-hover);
+  }
+}
+
+.btn--primary {
+  background-color: var(--read-btn);
+  color: white;
+  transition: .1s all ease-in;
+
+  &:hover {
+    background-color: var(--read-btn-hover);
+  }
+}
+
+.btn--404 {
+  text-align: center;
+  max-width: 200px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #189cf0;
+  color: white;
+  border: solid 1px #189cf0;
+  text-decoration: none;
+  transition: 0.2s all ease-in;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.read--btn {
+  text-align: center;
+  max-width: 200px;
+  background-color: var(--read-btn);
+  color: white;
+  border: none;
+  text-decoration: none;
+  transition: 0.1s all ease-in;
+
+  &:hover {
+    background-color: var(--read-btn-hover);
+  }
+}
+
+.follow-btn {
+  margin-right: auto;
+  border: none;
+  color: #fff;
+  background-color: #000;
+  transition: .1s all ease-in;
+  &:hover{
+    background-color: #323232;
+  }
+}
+.more__btn{
+  font-family: "iransansx";
+  text-decoration: underline;
+  font-weight: 300;
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  height: 48px;
+  max-width: 180px;
+  justify-content: center;
+  font-size: $f-btn;
+  padding: 0 12px;
+  text-align: center;
+  transition: background-color .1s ease, color .1s ease, border .1s ease;
+  cursor: pointer;
+  background: none;
+
+  &:hover {
+    background-color: var(--btn--bg-hover);
+  }
+}

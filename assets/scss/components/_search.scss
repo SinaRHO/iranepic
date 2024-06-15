@@ -1,0 +1,203 @@
+@use '../components/media' as *;
+@use '../components/variables' as *;
+
+.search {
+  flex-grow: 1;
+  position: unset;
+  height: 40px;
+
+  $tl: 0s;
+
+  .search-container {
+    justify-content: flex-end;
+    height: 40px;
+    position: absolute;
+    left: 220px;
+    align-items: center;
+    display: flex;
+    z-index: 100;
+    margin: 0;
+
+    @include respond-to ('small--tablet') {
+      position: absolute;
+      left: 124px;
+      width: calc(100% - 124px);
+
+      .open {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    .open {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      padding-left: 15px;
+      cursor: text;
+      width: 100%;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--btn--bg-hover);
+      color: black;
+      border: 1px solid #323335;
+
+      @include respond-to ('small--tablet') {
+        position: absolute;
+        top: 100%;
+      }
+    }
+
+    label {
+      position: relative;
+    }
+  }
+
+  .search__box {
+    transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
+    padding-right: 8px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: text;
+    width: 260px;
+    height: 40px;
+    border-radius: 8px;
+    background: none;
+    color: black;
+
+    @include respond-to ('small--tablet') {
+      transition: none;
+    }
+  }
+
+  .search-submit-btn {
+    display: none;
+  }
+
+  .open {
+    .search-submit-btn {
+      width: 40px;
+      height: 40px;
+      background-color: var(--header--bg);
+      color: var(--navbar-color);
+      border: 1px solid #323335;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &:hover {
+        background-color: var(--btn--bg-hover);
+      }
+    }
+
+    input {
+      background-color: var(--header--bg);
+      border: none;
+      outline: none;
+      box-shadow: none;
+      padding-left: 15px;
+      padding-right: 48px;
+      cursor: text;
+      width: 100%;
+      height: 40px;
+      border-radius: 8px;
+      color: var(--black);
+      border: 1px solid #323335;
+    }
+
+    .toggle-search-btn {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .search-box {
+    transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
+    padding-right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--btn--bg-hover);
+    color: black;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #323335;
+    background: none;
+
+    @include respond-to ('small--tablet') {
+      transition: none;
+    }
+
+    &+label .search-icon {
+      color: black
+    }
+
+    &:hover {
+
+      &+label .search-icon {
+        color: white
+      }
+    }
+
+    &:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      padding-left: 15px;
+      cursor: text;
+      width: 100%;
+      height: 40px;
+      border-radius: auto;
+      border: 1px solid #323335;
+
+      @include respond-to ('small--tablet') {
+        transition: none;
+      }
+
+      &+label .search-icon {
+        color: black;
+      }
+    }
+  }
+
+  .search-icon {
+    position: relative;
+    left: -30px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.toggle-search-btn {
+  color: var(--navbar-color);
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: var(--header--bg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 200;
+  border: 1px solid #323335;
+  transition: .1s all ease-out;
+
+  &:hover {
+    background-color: var(--btn--bg-hover);
+  }
+}
+
+.open {
+  .search-container {
+    left: 0;
+    width: 100%;
+  }
+}

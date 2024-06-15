@@ -1,0 +1,40 @@
+@use '../components/header';
+@use '../components/footer';
+@use '../components/btn';
+@use '../components/color';
+@use '../components/font' as *;
+@use '../components/media' as *;
+@use '../components/variables' as *;
+@use '../components/search';
+.main--section {
+  position: relative;
+  height: 100vh;
+
+  .notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    z-index: -1;
+    font-family: maven pro, sans-serif;
+    color: var(--white);
+    font-weight: 900;
+    font-size: 276px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,22 @@
+$f-h1: 2rem;
+$f-h2: 1.7rem;
+$f-h3: 1.4rem;
+$f-h4: 1.2rem;
+$f-h5: 1rem;
+$f-h6: .7rem;
+$f-desc: .8rem;
+$f-link: .9rem;
+$f-normal: 1rem;
+$f-title: 1.5rem;
+$lh-desc: 24px;
+$f-span: .6rem;
+$f-span-2: .75rem;
+$f-span-3: .85rem;
+$f-btn: 1rem;
+
+:where(h1, h2, h3, h4, h5, h6){
+  font-weight: 500;
+}
+:where(span, a){
+  font-weight: 300;
+}

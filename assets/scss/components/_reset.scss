@@ -1,0 +1,29 @@
+:where(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+}
+
+:where(ul, li, ol) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+:where(a, button) {
+  text-decoration: none;
+  border: none;
+  font-family: inherit;
+}
+
+:where(input) {
+  font-family: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+:where(img){
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,133 @@
+@use '../components/header';
+@use '../components/footer';
+@use '../components/btn';
+@use '../components/color';
+@use '../components/font' as *;
+@use '../components/media' as *;
+@use '../components/variables' as *;
+@use '../components/search';
+
+.book--lists {
+  display: flex;
+  flex-direction: column;
+
+  .book--types {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 12px;
+    border-bottom: solid 1px var(--border-archv);
+  }
+
+  .author__items {
+    .items {
+      color: #3d4954;
+      text-decoration: none;
+      border-bottom: solid 1px var(--border-archv);
+      display: block;
+      transition: 0.2s all;
+      &:last-child{
+        border: none;
+      }
+      &:hover {
+        background-color: var(--items-hover);
+        border-radius: 10px;
+      }
+    }
+
+    .items {
+      display: flex;
+      flex-direction: row;
+      padding: 16px;
+
+      img {
+        max-width: 120px;
+        max-height: 120px;
+        border-radius: 6px;
+      }
+
+      .items__desc {
+        display: flex;
+        flex-direction: column;
+        padding-right: 12px;
+        justify-content: center;
+        .roadmap--for-writerbooks{
+          font-weight: 300;
+          ul{
+            display: flex;
+            gap: 6px;
+            a{
+              font-size: $f-span-2;
+              color: var(--link-color);
+              &:hover{
+                color: var(--link-hover);
+              }
+            }
+          }
+        }
+        .link--title__items{
+          font-size: $f-h5;
+          font-weight: 700;
+          color: var(--link-color);
+          transition: .1s all ease-out;
+          &:hover{
+            color: var(--link-hover);
+          }
+        }
+        a{
+          font-size: $f-span-2;
+        }
+        p {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          @include respond-to ('small--tablet'){
+            -webkit-line-clamp: 3;
+          }
+        }
+      }
+    }
+  }
+}
+
+nav{
+  ul {
+    display: flex;
+    .active{
+      &::after{
+        content: "";
+        position: absolute;
+        width: 36px;
+        height: 2px;
+        bottom: -2;
+        left: 50%;
+        translate: -50%;
+        background-color: #67d4ea;
+        box-shadow: 0px -1px 5px 0px #67d4ea;
+      }
+    }
+    a {
+      padding: 12px 0 12px 12px;
+      position: relative;
+      font-weight: 400;
+  
+  
+      &:hover {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 36px;
+          height: 2px;
+          bottom: -2;
+          left: 50%;
+          translate: -50%;
+          background-color: #67d4ea;
+          box-shadow: 0px -1px 5px 0px #67d4ea;
+        }
+      }
+    }
+  }
+}
+h4{
+  margin-block: 24px;
+}

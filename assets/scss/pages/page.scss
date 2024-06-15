@@ -1,0 +1,14 @@
+@use '../components/header';
+@use '../components/footer' as *;
+@use '../components/btn';
+@use '../components/color';
+@use '../components/font' as *;
+@use '../components/media' as *;
+@use '../components/variables' as *;
+@use '../components/search';
+
+.flex--page{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
